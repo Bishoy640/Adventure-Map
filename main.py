@@ -20,16 +20,6 @@ locations = {0: {"desc": "You are sitting in front of a computer learning Python
                  "exits": {"W": 2, "S": 1, "Q": 0},
                  "namedExits": {"1": 1, "2": 2, "0": 0}}
              }
-vocabulary = {"QUIT": "Q",
-              "NORTH": "N",
-              "SOUTH": "S",
-              "EAST": "E",
-              "WEST": "W",
-              "ROAD": "1",
-              "HILL": "2",
-              "BUILDING": "3",
-              "VALLEY": "4",
-              "FOREST": "5"}
 
 loc = 1
 
@@ -41,7 +31,7 @@ while True:
         print(locationShelve[str(loc)]["desc"])
         if loc == 0:
             break
-        direction = input("Available exits are " + availableExits + " ").upper()
+        direction = input("Available exits are " + availableExits + " " +" or simply ask politely (es: Can i go north?)").upper()
 
         allExits = locationShelve[str(loc)]["exits"].copy()
         allExits.update(locationShelve[str(loc)]["namedExits"])
